@@ -13,6 +13,6 @@ jobs:
       uses: peter-evans/repository-dispatch@v2
       with:
         token: ${{ secrets.MANIFEST_DISPATCH_PAT }} # Use the PAT stored as a secret
-        repository: Nishimba/TrinketTrayManifests # The target repository
+        repository: Nishimba/TrinketTrayManifest # The target repository
         event-type: trinket_collection_updated # The custom event type defined in the target workflow
         client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}' # Optional: pass data
